@@ -1,0 +1,25 @@
+{
+  "name": "readpublicdoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaeGo-1/ReadPublicDoc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TaeGo-1/ReadPublicDoc/issues"
+  },
+  "homepage": "https://github.com/TaeGo-1/ReadPublicDoc#readme",
+  "dependencies": {
+    "axios": "^1.20.0",
+    "cheerio": "^1.2.0"
+  }
+}
