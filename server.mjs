@@ -85,9 +85,9 @@ const server = createServer((req, res) => {
 	}
 });
 
+const port = process.env.PORT || 4000;
 // 傳入 0 讓系統自動分配空閒 Port
-server.listen(0, () => {
-	const port = server.address().port;
+server.listen(port, () => {
 	const url = `http://localhost:${port}/`;
 	const startCmd = process.platform === 'darwin' ? 'open' : 
                      process.platform === 'win32' ? 'start' : 'xdg-open';
