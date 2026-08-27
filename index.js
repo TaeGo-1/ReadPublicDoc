@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('#myForm').addEventListener('submit', async (e) => {
         e.preventDefault();
+        document.getElementById('load').style.display = 'block';
+        //document.getElementById('load')?.style.display = 'none';
 
         const inputs = document.querySelectorAll('.input-text');
         const urlArray = Array.from(inputs)
@@ -59,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = URL.createObjectURL(blob);
             } else {
                 alert('解析失敗，請確認網址是否正確');
+                document.getElementById('load').style.display = 'none';
             }
         } catch (error) {
             console.error('發送失敗:', error);
