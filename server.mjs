@@ -127,7 +127,7 @@ function generateHtml(urlHtml, commitTitle, formattedJsonText) {
         <div class="box">
             <strong>內容：</strong>
 			<button id="copyTxtBtn">複製內容</button> 請貼到 CustomizeContent.ts 的Array裡
-            <div id="txtContent" style="text-align: left;">${formattedJsonText}</div>
+            <div id="txtContent" style="text-align: left;white-space: pre-wrap;">${formattedJsonText}</div>
         </div>
         <strong>偶爾會錯誤，匯出後最好再比對一下數量<br/>若發生錯誤請到Git將檔案重置</strong>
 
@@ -212,6 +212,7 @@ async function printData(googleDriveFileUrlArray) {
 	const newArray = objArray.map(({ url, ...rest }) => rest);
 
     let txt = await writeFileContent(objArray);
+	console.log(txt);
     return generateHtml(urlHtml, commitTitle, txt);
 }
 
