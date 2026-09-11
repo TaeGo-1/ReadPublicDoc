@@ -207,7 +207,7 @@ async function printData(googleDriveFileUrlArray) {
     const titleList = objArray.map(item => item.title);
     titleList.forEach((item, index) => {
         commitTitle += (index === 0) ? `"${item}"` : `、"${item}"`;
-        urlHtml += `<a href="${objArray[index].url}" target="_blank">${item}</a><br/>`;
+        urlHtml += `<p><a href="${objArray[index].url}" target="_blank">${item}</a></p>`;
     });
 	const newArray = objArray.map(({ url, ...rest }) => rest);
 
