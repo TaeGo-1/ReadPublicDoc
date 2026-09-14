@@ -129,7 +129,7 @@ function generateHtml(urlHtml, commitTitle, formattedJsonText) {
 			<button id="copyTxtBtn">複製內容</button> 請貼到 CustomizeContent.ts 的Array裡
             <div id="txtContent" style="text-align: left;white-space: pre-wrap;">${formattedJsonText}</div>
         </div>
-        <strong>偶爾會錯誤，匯出後最好再比對一下數量<br/>若發生錯誤請到Git將檔案重置</strong>
+        <strong>偶爾會錯誤，匯出後最好再比對一下數量</strong>
 
         <script>
             // 改用 Blob 跳轉後，DOMContentLoaded 就會正常觸發！
